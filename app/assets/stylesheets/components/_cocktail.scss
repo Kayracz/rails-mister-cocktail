@@ -2,21 +2,35 @@
 .banner {
   color: white;
   text-align: center;
-  height: 400px;
+  height: 80vh;
   background-size: cover !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; // background-image: url('/assets/images/cocktail.jpg');
   margin-bottom: 32px;
-  font-family: lato;
-  // background-image: url('/assets/images/cocktail.jpg');
+  font-family: monospace;
 }
 
+.banner-content{
 
-.btn-primary {
-  border-radius: 20px;
+font-family: Fantasy;
+.banner h1{
+ color: white;
+ text-align:center;
 }
 
-body{
-  color: gray;
+.banner p {
+margin-bottom: 30px;
+color: white;
+}
+}
+
+.btn-info {
+  border-radius: 10px;
+  font-family: verdana;
+  font-size: 15px;
+}
+
+body {
+
 }
