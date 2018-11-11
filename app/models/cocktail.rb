@@ -4,7 +4,5 @@ class Cocktail < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: true
   mount_uploader :photo, PhotoUploader
-# name is unique
-# has many doses
-# should destroy child doses when destroying self
+
 end

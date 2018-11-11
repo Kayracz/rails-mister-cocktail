@@ -1,22 +1,25 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,0,0,0.6) 60%), url('<%= image_path 'cocktail.jpg' %>');">
+
  <div class="banner-content">
-   <h2>Kayra’s cocktails</h2>
+   <h1>Kayra’s cocktails</h1>
    <p> The best cocktails for developers nightlife </p>
    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-info btn-lg" %>
  </div>
 </div>
 
+<div class="body" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,0,0,0.6) 60%), url('<%= image_path 'onfire.jpg' %>');">
+
 <div class="container">
  <div class="row">
-   <div class="row">
+   <!--   <div class="row"> -->
      <% @cocktails.each do |cocktail| %>
+
      <div class="col-xs-12 col-sm-6 col-md-3">
        <% if cocktail.photo.present? %>
        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path(cocktail.photo) %>);">
          <% else %>
          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://source.unsplash.com/500x400/?<%= cocktail.name %>');">
            <% end %>
-
            <div class="card-description">
              <h2><%= cocktail.name %></h2>
              <a href="/cocktails/1/edit">Edit</a>
